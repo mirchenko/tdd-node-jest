@@ -8,7 +8,5 @@ exports.up = (knex, Promise) => knex.schema.createTable('posts', t => {
   t.timestamp('updated_at', true).notNullable().defaultTo(knex.fn.now());
 });
 
-
-
 exports.down = (knex, Promise) => knex.schema.dropTable('posts');
 

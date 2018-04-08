@@ -1,10 +1,10 @@
-const Posts = require('../../Models/Posts');
+const Posts = require('../../models/Posts');
 
 module.exports = async ctx => {
   try {
     const { id } = ctx.params;
 
-    const post = await Posts.query().select().where({id});
+    const [post] = await Posts.query().select().where({id});
     ctx.status = 200;
     ctx.body = { data: post };
 

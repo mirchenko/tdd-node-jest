@@ -1,5 +1,4 @@
-const Posts = require('../../Models/Posts');
-
+const Posts = require('../../models/Posts');
 
 module.exports = async ctx => {
   try {
